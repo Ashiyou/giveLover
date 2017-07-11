@@ -1,21 +1,33 @@
-<!doctype html>
-<html>
-<meta charset="utf-8">
-<title>给你这个美女</title>
-<style>
-    body{
-      background:greenyellow;
-    }
-    h2{
-      color:#ff4800;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#my{
+			color:#376956;
+			font-family:"方正舒体";
+			font-size:25px;
+		}
+	</style>
+</head>
 <body>
-    <div>
-      <h2>美女</h2>
-    </div>
-    <div>
-        <h2>晚上耳机借我用一下子呗</h2>
-    </div>
+	<p id="my"></p>
+	<div id="your" style="display:none">
+		港岛妹妹,你献给我的西班牙韭菜馅大包子,甜蜜的融化了我,天空之城在哭泣
+	</div>
 </body>
 </html>
+<script>
+	var my = document.getElementById('my');
+	var your = document.getElementById('your').innerHTML;
+	console.log(my)
+	var index = 0;
+
+	function type(){
+		my.innerText = your.substring(0,index++);
+	}
+
+	setInterval(type,350);
+</script>
+
